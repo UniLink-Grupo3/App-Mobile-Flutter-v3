@@ -13,9 +13,7 @@ class StartTripPage extends StatefulWidget {
     required this.onAccept,
   });
 
-  //final List<UniversityStudentWithoutCar> acceptedStudents;
   final ValueNotifier<List<UniversityStudentWithoutCar>> acceptedStudents;
-  //final ValueNotifier<List<UniversityStudentWithoutCar>> acceptedNotifier = ValueNotifier([]);
   final List<UniversityStudentWithoutCar> students;  
   final ValueNotifier<Set<int>> boardedIds; 
   final ValueChanged<UniversityStudentWithoutCar> onAccept; 
@@ -26,7 +24,6 @@ class StartTripPage extends StatefulWidget {
 
 class _StartTripPageState extends State<StartTripPage>
   with AutomaticKeepAliveClientMixin {
-  //final ValueNotifier<List<UniversityStudentWithoutCar>> acceptedNotifier = ValueNotifier([]);
   
   late final ValueNotifier<List<UniversityStudentWithoutCar>> acceptedNotifier;
   

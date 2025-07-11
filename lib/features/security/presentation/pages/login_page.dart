@@ -154,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 onPressed: _loginUser,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.lightBlue,
+                  backgroundColor: Color.fromRGBO(3, 72, 141, 0.63),
                 ),
                 child: const Text(
                   'Login',
@@ -176,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
                 }, 
                 child: Text(
                   '¿No tienes cuenta? Regístrate',
-                  style: TextStyle(color: Colors.purple, fontSize: 14),
+                  style: TextStyle(color: Color.fromRGBO(1, 35, 70, 0.627), fontSize: 14),
                 ),
               ),
             ),

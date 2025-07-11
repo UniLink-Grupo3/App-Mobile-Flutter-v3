@@ -79,7 +79,7 @@ class _StudentDestinationViewState extends State<StudentDestinationView> {
         children: [
           Container(
             padding: const EdgeInsets.all(12),
-            decoration: const BoxDecoration(color: Color(0xFF1286F2)),
+            decoration: const BoxDecoration(color: Color.fromRGBO(3, 72, 141, 0.884)),
             child: TextField(
               controller: _controller,
               focusNode: _focusNode,
@@ -111,7 +111,7 @@ class _StudentDestinationViewState extends State<StudentDestinationView> {
                 itemBuilder: (_, i) {
                   final s = _filtered[i];
                   return ListTile(
-                    leading: const Icon(Icons.school, color: Colors.indigo),
+                    leading: const Icon(Icons.school, color: Color.fromRGBO(202, 96, 9, 0.753)),
                     title: Text(s),
                     onTap: () {
                       _controller.text = s;
@@ -135,7 +135,7 @@ class _StudentDestinationViewState extends State<StudentDestinationView> {
               height: 46,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1824F7),
+                  backgroundColor: const Color.fromRGBO(3, 72, 141, 0.884),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(24),
                   ),
