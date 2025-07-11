@@ -27,8 +27,14 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Colors.white, // Color del fondo de la pantalla. AQUI
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Text('EDIT PROFILE'),
+        title: Text(
+          'PERFIL',
+          style: TextStyle(
+            fontWeight: FontWeight.bold
+          ),
+          ),
         centerTitle: true,
+        backgroundColor: Colors.blue[100], 
       ),
       body: BlocConsumer<DriverBloc, DriverState>(
         listener:(context, state) {

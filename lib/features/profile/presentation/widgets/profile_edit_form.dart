@@ -114,7 +114,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
 
             //---------Boton de Save
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -136,11 +136,46 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                     }
                   },
                   style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 50),
+                    minimumSize: Size(200, 50), // Cambia el tamaño del botón
+                    backgroundColor: Colors.blue[100], 
+                    textStyle: TextStyle(color: Colors.black)// Cambia el color del botón
                   ),
-                  child: Text(isEditing ? 'Save' : 'Edit'), // Cambia el texto del botón
+                  child: Text(
+                    isEditing ? 'Guardar' : 'Editar',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold, // Cambia el color del texto del botón
+                      fontSize: 20, // Cambia el tamaño del texto del botón),
+                    ), // Cambia el texto del botón
                 ),
               ),
+            ),
+            ),
+            const Spacer(),
+             Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                      
+                    Navigator.of(context).pop();
+                  },
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: Size(50, 50), // Cambia el tamaño del botón
+                    backgroundColor: Colors.red, 
+                    textStyle: TextStyle(color: Colors.black)// Cambia el color del botón
+                  ),
+                  child: Text(
+                     'Cerrar Sesión',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold, // Cambia el color del texto del botón
+                      fontSize: 20, // Cambia el tamaño del texto del botón),
+                    ), // Cambia el texto del botón
+                ),
+              ),
+                          ),
             ),
             
           ],
