@@ -18,7 +18,7 @@ class StudentCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: boarded ? Color.fromRGBO(20, 50, 80, 0.31) : null,
+      color: boarded ? Color.fromRGBO(20, 50, 80, 0.50) : null,
       elevation: 4,
       child: Column(
         mainAxisSize: MainAxisSize.min,
