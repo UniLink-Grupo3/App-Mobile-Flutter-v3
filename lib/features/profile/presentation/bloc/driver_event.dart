@@ -16,6 +16,7 @@ class UpdateDriverInfo extends DriverEvent {
   final int id; 
   final String name;
   final String mail;
+  final String phone;
   final String university;
   final String car;
 
@@ -23,6 +24,7 @@ class UpdateDriverInfo extends DriverEvent {
     required this.id,
     required this.name,
     required this.mail,
+    required this.phone,
     required this.university,
     required this.car,
   });

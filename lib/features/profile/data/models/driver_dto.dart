@@ -5,6 +5,7 @@ class DriverDto{
   final String name;
   final String mail;
   final String university;
+  final String phone;
   final String car;
 
   const DriverDto({
@@ -12,16 +13,18 @@ class DriverDto{
     required this.name,
     required this.mail,
     required this.university,
+    required this.phone,
     required this.car,
   });
 
   factory DriverDto.fromJson(Map<String, dynamic> json) {
     return DriverDto(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      mail: json['mail'] as String,
-      university: json['university'] as String,
-      car: json['car'] as String,
+      name: json['nombre'] as String,
+      mail: json['correo'] as String,
+      phone: json['numero'] as String,
+      university: "upc",
+      car: "Toyota corolla",
+      id : 1,
     );
   }
 
@@ -31,6 +34,7 @@ class DriverDto{
       name: name,
       mail: mail,
       university: university,
+      phone: phone,
       car: car,
     );
   }

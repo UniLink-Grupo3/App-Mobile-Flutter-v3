@@ -24,6 +24,7 @@ class DriverBloc extends Bloc<DriverEvent, DriverState> {
           id: event.id, 
           name: event.name,
           mail: event.mail,
+          phone: event.phone,
           university: event.university,
           car: event.car,
         );

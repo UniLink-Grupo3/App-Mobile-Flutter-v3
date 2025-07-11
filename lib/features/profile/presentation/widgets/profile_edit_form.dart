@@ -20,6 +20,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
   late TextEditingController emailController;
   late TextEditingController universityController;
   late TextEditingController carController;
+  late TextEditingController phoneController;
 
   @override
   void initState() {
@@ -29,6 +30,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
     nameController = TextEditingController(text: widget.driver.name);
     emailController = TextEditingController(text: widget.driver.mail);
     universityController = TextEditingController(text: widget.driver.university);
+    phoneController = TextEditingController(text: widget.driver.phone);
     carController = TextEditingController(text: widget.driver.car);
   }
 
@@ -38,6 +40,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
     emailController.dispose();
     universityController.dispose();
     carController.dispose();
+    phoneController.dispose();
     super.dispose();
   }
 
@@ -96,8 +99,19 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                 ),
               ),
             ),
+            //---------Seccion del phone
             
-
+Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                readOnly: !isEditing,
+                controller: phoneController,
+                decoration: InputDecoration(
+                  labelText: 'Numero',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
             //---------Seccion de car
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -131,6 +145,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                         name: nameController.text,
                         mail: emailController.text,
                         university: universityController.text,
+                        phone: widget.driver.phone, 
                         car: carController.text,
                       ));
                     }
@@ -177,7 +192,7 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
               ),
                           ),
             ),
-            
+
           ],
         );
   }

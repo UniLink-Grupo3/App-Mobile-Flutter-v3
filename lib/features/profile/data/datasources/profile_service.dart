@@ -8,7 +8,7 @@ import 'package:profile_page/features/profile/domain/driver.dart';
 class ProfileService {
 
   Future<Driver> getDriver(int id) async{
-    final Uri url = Uri.parse('http://localhost:3000/users/${id}');
+    final Uri url = Uri.parse('https://movbackfinallll-production.up.railway.app/auth/me');
     http.Response response = await http.get(url);
     if (response.statusCode == HttpStatus.ok) {
       final drivermap = jsonDecode(response.body) as Map<String, dynamic>;
