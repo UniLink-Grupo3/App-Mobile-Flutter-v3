@@ -18,7 +18,7 @@ class StudentCardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: boarded ? Color.fromRGBO(20, 50, 80, 0.50) : null,
+      color: boarded ? Color.fromRGBO(247, 247, 247, 1) : null,
       elevation: 4,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -46,28 +46,28 @@ class StudentCardView extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        const Icon(Icons.person, size: 20),
+                        const Icon(Icons.person, size: 20, color: Color.fromRGBO(58, 183, 147, 0.859)),
                         const SizedBox(width: 5),
                         Text(" ${student.name}"),
                       ],
                     ),
                     Row(
                       children: [
-                        const Icon(Icons.my_location, size: 20),
+                        const Icon(Icons.my_location, size: 20, color: Color.fromRGBO(58, 183, 147, 0.859)),
                         const SizedBox(width: 5),
                         Text(" ${student.pickup}"),
                       ],
                     ),
                     Row(
                       children: [
-                        const Icon(Icons.pin_drop, size: 20),
+                        const Icon(Icons.pin_drop, size: 20, color: Color.fromRGBO(58, 183, 147, 0.859)),
                         const SizedBox(width: 5),
                         Text(" ${student.destination}"),
                       ],
                     ),
                     Row(
                       children: [
-                        const Icon(Icons.payments, size: 20),
+                        const Icon(Icons.payments, size: 20, color: Color.fromRGBO(58, 183, 147, 0.859)),
                         const SizedBox(width: 5),
                         Text(" ${student.price}"),
                       ],
@@ -78,14 +78,15 @@ class StudentCardView extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(top: 8.0, bottom: 0.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("${student.code} - ${student.university}",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(3, 72, 141, 0.63),
+                  fontSize: 16,
+                  color: Color.fromRGBO(5, 73, 124, 0.859),
                 ),
                 ),
               ],
@@ -94,25 +95,32 @@ class StudentCardView extends StatelessWidget {
           if (boarded)
             Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.green,
-                  child: const Text(
-                    'Pasajero(s) a bordo',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 0.0,),
+                  child: Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(8),
+                    color: Color.fromRGBO(58, 183, 147, 0.859), //245, 240, 230, 0.96
+                    child: const Text(
+                      'Pasajero(s) a bordo',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: Colors.black54, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton.icon(
                     onPressed: onArrived, // llamada
-                    icon: const Icon(Icons.directions_walk),
-                    label: const Text("Pasajero(s) llegó a su destino"),
+                    icon: const Icon(Icons.directions_walk, color: Colors.white,),
+                    label: const Text("Pasajero(s) llegó a su destino", 
+                      style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                ),),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Color.fromRGBO(202, 96, 9, 0.753), //202, 96, 9, 0.753 - 44, 128, 212, 0.859
                     ),
                   ),
                 )
@@ -124,7 +132,7 @@ class StudentCardView extends StatelessWidget {
               child: FilledButton(
                 onPressed: onBoarded,
                 style: FilledButton.styleFrom(
-                  backgroundColor: Color.fromRGBO(1, 105, 76, 0.785),
+                  backgroundColor: Color.fromRGBO(202, 96, 9, 0.753),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
                   padding: const EdgeInsets.all(10),
