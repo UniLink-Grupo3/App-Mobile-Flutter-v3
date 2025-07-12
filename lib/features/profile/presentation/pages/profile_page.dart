@@ -17,7 +17,7 @@ class _ProfilePageState extends State<ProfilePage> {
   void initState() {
     super.initState();
     context.read<DriverBloc>().add(
-      GetDriverInfo(id: 1)
+      GetDriverInfo()
     );
   }
 

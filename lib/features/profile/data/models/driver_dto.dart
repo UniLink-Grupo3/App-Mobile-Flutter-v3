@@ -19,12 +19,12 @@ class DriverDto{
 
   factory DriverDto.fromJson(Map<String, dynamic> json) {
     return DriverDto(
-      name: json['nombre'] as String,
-      mail: json['correo'] as String,
-      phone: json['numero'] as String,
-      university: "upc",
-      car: "Toyota corolla",
-      id : 1,
+      name: json['nombre']?.toString() ?? 'Sin nombre', // Convierte a String si es necesario
+      mail: json['correo']?.toString() ?? 'Sin correo',
+      phone: json['numero']?.toString() ?? 'Sin número',
+      university: "upc",   // Valor por defecto
+      car: "Toyota corolla", // Valor por defecto
+      id: 1,              // Valor por defecto
     );
   }
 
